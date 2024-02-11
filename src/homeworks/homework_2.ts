@@ -70,8 +70,8 @@ logBookTitles(titlesArr);
 
 type bookInfo = [string, string]
 const getBookAuthorByIndex = (index: number): bookInfo  => {
-    const book = allBooks.find((book: Book) => book.id === index)
-    return book ? [book.title, book.author] : ['title', 'author']
+    const book = allBooks.find((book: Book) => book.id === index);
+    return book ? [book.title, book.author] : ['title', 'author'];
 }
 
 /**
@@ -88,13 +88,13 @@ const calcTotalPages = (): bigint => {
 
     ];
 
-    let sum: bigint = 0n
+    let sum: bigint = 0n;
 
     libraries.forEach((library: Library): void => {
-        sum += BigInt(library.books) + BigInt(library.avgPagesPerBook)
-    })
+        sum += BigInt(library.books) * BigInt(library.avgPagesPerBook);
+    });
 
-    return sum
+    return sum;
 }
 
-console.log(calcTotalPages())
+console.log(calcTotalPages());
