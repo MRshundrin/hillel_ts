@@ -83,7 +83,6 @@ class Triangle extends Figure {
     }
 }
 
-// Example usage:
 const circle = new Circle(5, "red");
 console.log(`Area of ${circle.name} with radius ${circle.radius}: ${circle.calculateArea()}`);
 
